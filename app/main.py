@@ -35,12 +35,13 @@ menu_options = {
 
 def main_menu():
     p = 0
-    n = len(menu_options.keys())
+    l = menu_options.keys()
+    n = len(l)
     while True:
         swrite("^", line=1, pos=8)
         
-        swrite(menu_options[p], 2, 5)
-        swrite(menu_options[p+1], 3, 5)
+        swrite(menu_options[l[p]], 2, 5)
+        swrite(menu_options[l[p+1]], 3, 5)
 
         swrite("v", 4, 8)
 
