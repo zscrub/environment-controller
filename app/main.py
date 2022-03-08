@@ -70,10 +70,15 @@ def button_test():
     k = 1
     while True:
         if rpi_gpio.GPIO.input(40) == rpi_gpio.GPIO.HIGH: #button pressed
-            swrite(f"Button pressed {i} times!", 2, 5)
-            print(f"Button pressed {i} times!")
+            swrite(f"Button 1 pressed {i} times!", 2, 5)
+            print(f"Button 1 pressed {i} times!")
             i+=1
-            button_pressed(k)
+
+        if rpi_gpio.GPIO.input(38) == rpi_gpio.GPIO.HIGH: #button pressed
+            swrite(f"Button 2 pressed {k} times!", 2, 5)
+            print(f"Button 2 pressed {k} times!")
+            k+=1
+            #button_pressed(k)
 
 
 def button_pressed(k):
