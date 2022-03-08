@@ -4,7 +4,7 @@
 
 # import rpi_gpio
 import I2C_LCD_driver as mylcd
-
+from I2C_LCD_driver import lcd_display_string as swrite
 
 def readSensor():
     root.after(5000, readSensor)
@@ -24,12 +24,18 @@ mylcd = mylcd.lcd()
 
 
 def populateScreen(w, x, y, z):
-    mylcd.lcd_display_string(f"{w}", line=1, pos=5)
-    mylcd.lcd_display_string(f"{x}", 2, 9)
-    mylcd.lcd_display_string(f"{y}", 3, 3)
-    mylcd.lcd_display_string(f"{z}", 4) # pos=0
+    swrite(f"{w}", line=1, pos=5)
+    swrite(f"{x}", 2, 9)
+    swrite(f"{y}", 3, 3)
+    swrite(f"{z}", 4) # pos=0
 
-populateScreen("Line >1", "Line 2?", "Line 3!", "Line ../4")
+# populateScreen("Line >1", "Line 2?", "Line 3!", "Line ../4")
+
+menu_options = ["Network", "System", "Config", "assxt", "someother"]
 
 def main_menu():
-    ...
+    n = len(menu_options)
+    swrite(">", line=1, pos=0)
+    for i in range(n):
+        swrite(f"{menu_options[i]}", line=i, pos=2)
+        
