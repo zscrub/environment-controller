@@ -4,7 +4,7 @@
 
 # import rpi_gpio
 import I2C_LCD_driver as mylcd
-
+import keyboard
 
 def readSensor():
     root.after(5000, readSensor)
@@ -34,15 +34,22 @@ def populateScreen(w, x, y, z):
 menu_options = ["Network", "System", "Config", "assxt", "someother"]
 
 def main_menu():
-    n = len(menu_options)
-    p = 0
+    while True:
+        n = len(menu_options)
+        p = 0
 
-    swrite("^", line=1, pos=8)
+        if keyboard.is_pressed("w") and p<n:
+            p+=1
 
-    swrite(menu_options[p], line=2, pos=5)
-    swrite(menu_options[p+1], line=3, pos=5)
+        if keyboard.is_pressed("s") and p>=0:
+            p-=1
 
-    swrite("v", line=4, pos=8)
+        swrite("^", line=1, pos=8)
+
+        swrite(menu_options[p], line=2, pos=5)
+        swrite(menu_options[p+1], line=3, pos=5)
+
+        swrite("v", line=4, pos=8)
 
 
 main_menu()
