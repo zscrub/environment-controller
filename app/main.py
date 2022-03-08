@@ -36,12 +36,13 @@ menu_options = ["Network", "System", "Config", "assxt", "someother"]
 def main_menu():
     n = len(menu_options)
     p = 0
-    swrite("^", line=2, pos=8)
+
+    swrite("^", line=1, pos=8)
 
     swrite(menu_options[p], line=2, pos=5)
-    swrite(menu_options[p+1], line=2, pos=5)
-    
-    swrite("v", line=3, pos=8)
+    swrite(menu_options[p+1], line=3, pos=5)
+
+    swrite("v", line=4, pos=8)
 
 
 main_menu()
