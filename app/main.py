@@ -10,7 +10,7 @@ import I2C_LCD_driver as mylcd
 
 def readSensor():
     root.after(5000, readSensor)
-    h,t = dht.read_retry(dht.DHT22,4)
+    h,t = dht.read_retry(dht.DHT22,7)
     temp = f"{t:.1f}"
     o = u"\N{DEGREE SIGN}"
 
