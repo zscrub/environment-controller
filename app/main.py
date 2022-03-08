@@ -23,9 +23,8 @@ def readSensor():
 	# humiditytext.set(hum)
 
 
-screen = mylcd.lcd()
-swrite = screen.lcd_display_string
-
+swrite = mylcd.lcd().lcd_display_string
+clr = mylcd.lcd().lcd_clear()
 
 menu_options = {
         "Temp": {"SetTemp": 0, "SetFormat": "F"}, 
@@ -48,7 +47,7 @@ def main_menu():
 
         swrite("v", 4, 8)
 
-        if p==n-2: swrite(">", 3, 3); break
+        if p==n-2: clr; swrite(">", 3, 3); break
 
         sleep(1.5)
         p+=1
