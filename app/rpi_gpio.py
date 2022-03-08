@@ -5,7 +5,8 @@ GPIO.setmode(GPIO.BOARD)
 GPIO.setwarnings(False) 
 BUTTON_DOWN=GPIO.setup(40, GPIO.IN, pull_up_down=GPIO.PUD_DOWN) # Set pin to be an input pin and set initial value to be pulled low (off)
 
-if BUTTON_DOWN: print("Button pressed 8)")
+if GPIO.input(40) == GPIO.HIGH:
+        print("Button was pushed!")
 
 # GPIO.setup(6,GPIO.OUT) # relay 1
 # GPIO.output(6,GPIO.HIGH)
