@@ -24,9 +24,12 @@ mylcd = mylcd.lcd()
 
 
 def populateScreen(w, x, y, z):
-    mylcd.lcd_display_string(f"{w}", 1)
-    mylcd.lcd_display_string(f"{x}", 2)
-    mylcd.lcd_display_string(f"{y}", 3)
-    mylcd.lcd_display_string(f"{z}", 4)
+    mylcd.lcd_display_string(f"{w}", line=1, pos=5)
+    mylcd.lcd_display_string(f"{x}", 2, 9)
+    mylcd.lcd_display_string(f"{y}", 3, 3)
+    mylcd.lcd_display_string(f"{z}", 4) # pos=0
 
 populateScreen("Line >1", "Line 2?", "Line 3!", "Line ../4")
+
+def main_menu():
+    ...
