@@ -36,9 +36,9 @@ def populateScreen(w, x, y, z):
 menu_options = ["Network", "System", "Config", "assxt", "someother"]
 
 def main_menu():
+    p = 0
     while True:
         n = len(menu_options)
-        p = 0
 
         # if keyboard.is_pressed("s") and p<n+1: p+=1
         swrite("^", line=1, pos=8)
@@ -48,9 +48,10 @@ def main_menu():
 
         swrite("v", line=4, pos=8)
 
-        if p==n: break
+        if p==n-1: break
     
         sleep(1.5)
         p+=1
+        
 
 main_menu()
