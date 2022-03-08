@@ -3,7 +3,6 @@
 # sudo pip3 install Adafruit_DHT
 
 # import rpi_gpio
-import I2C_LCD_driver as mylcd
 from I2C_LCD_driver import lcd_display_string as swrite
 
 def readSensor():
@@ -38,4 +37,3 @@ def main_menu():
     swrite(">", line=1, pos=0)
     for i in range(n):
         swrite(f"{menu_options[i]}", line=i, pos=2)
-        
