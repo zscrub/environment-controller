@@ -2,7 +2,7 @@
 # pip install RPi.GPIO 
 # sudo pip3 install Adafruit_DHT
 
-# import rpi_gpio
+import rpi_gpio
 
 from time import sleep
 import I2C_LCD_driver as mylcd
@@ -36,11 +36,13 @@ menu_options = {
 
 menu_list = list(menu_options.keys())
 
+
 def main_menu():
     p = 0
     l = list(menu_options.keys())
     n = len(l)
     while True:
+
         swrite("^", line=1, pos=8)
         swrite(">", 2, 3)
 
