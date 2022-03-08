@@ -38,7 +38,6 @@ menu_options = ["Network", "System", "Config", "assxt", "someother"]
 def main_menu():
     p = 0
     while True:
-        if p==n-2: break
         n = len(menu_options)
 
         # if keyboard.is_pressed("s") and p<n+1: p+=1
@@ -49,6 +48,7 @@ def main_menu():
 
         swrite("v", line=4, pos=8)
 
+        if p==n-2: break
     
         sleep(1.5)
         p+=1
