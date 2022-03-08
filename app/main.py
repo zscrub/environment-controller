@@ -51,6 +51,6 @@ def main_menu():
 
         sleep(1.5)
         p+=1
-        screen.lcd_clear()
+        clr
 
 main_menu()
