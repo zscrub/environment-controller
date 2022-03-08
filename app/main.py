@@ -68,5 +68,6 @@ def main_menu():
 def button_test():
     while True:
         if rpi_gpio.GPIO.input(40) == rpi_gpio.GPIO.HIGH: swrite(f"Button pressed", 2, 5)
+            print("Button Pressed")
 
 button_test()
