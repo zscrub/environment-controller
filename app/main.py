@@ -72,6 +72,7 @@ def button_test():
             swrite(f"Button pressed {i} times!", 2, 5)
             print(f"Button pressed {i} times!")
             i+=1
+            button_pressed()
 
 
 def button_pressed():
