@@ -43,8 +43,10 @@ def main_menu():
     while True:
         swrite("^", line=1, pos=8)
         swrite(">", 2, 3)
-        swrite(menu_list[p], 2, 5)
-        swrite(menu_list[p+1], 3, 5)
+
+        swrite(f"{p}.{menu_list[p]1}" 2, 5)
+        swrite(f"{p}.{menu_list[p+1}"], 3, 5)
+        
         print(menu_list[p])
         print(menu_list[p+1])
 
