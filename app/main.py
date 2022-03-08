@@ -22,36 +22,32 @@ def readSensor():
 	# humidity.set(hum+"  %")
 	# humiditytext.set(hum)
 
+
 screen = mylcd.lcd()
 swrite = screen.lcd_display_string
 
-def populateScreen(w, x, y, z):
-    swrite(f"{w}", line=1, pos=5)
-    swrite(f"{x}", 2, 9)
-    swrite(f"{y}", 3, 3)
-    swrite(f"{z}", 4) # pos=0
-
-# populateScreen("Line >1", "Line 2?", "Line 3!", "Line ../4")
-
-menu_options = ["Network", "System", "Config", "assxt", "someother"]
+menu_options = {
+        "Temperature": {"TargetTemp": 0, "TempFormat": "F"}, 
+        "Humidity": 0.8,
+        "Light": 0, 
+        "Fan": 0
+    }
 
 def main_menu():
     p = 0
+    n = len(menu_options.keys())
     while True:
-        n = len(menu_options)
-
-        # if keyboard.is_pressed("s") and p<n+1: p+=1
         swrite("^", line=1, pos=8)
+        
+        swrite(menu_options[p], 2, 5)
+        swrite(menu_options[p+1], 3, 5)
 
-        swrite(menu_options[p], line=2, pos=5)
-        swrite(menu_options[p+1], line=3, pos=5)
-
-        swrite("v", line=4, pos=8)
+        swrite("v", 4, 8)
 
         if p==n-2: break
-    
+
         sleep(1.5)
         p+=1
-        
+        screen.lcd_clear()
 
 main_menu()
