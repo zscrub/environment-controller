@@ -2,6 +2,7 @@ Adafruit-Blinka==7.1.0
 adafruit-circuitpython-dht==3.7.1
 Adafruit-PlatformDetect==3.20.1
 Adafruit-PureIO==1.1.9
+keyboard==0.13.5
 pyftdi==0.53.3
 pyserial==3.5
 pyusb==1.2.1
