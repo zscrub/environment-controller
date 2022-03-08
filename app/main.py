@@ -3,7 +3,8 @@
 # sudo pip3 install Adafruit_DHT
 
 # import rpi_gpio
-from I2C_LCD_driver import lcd_display_string as swrite
+import I2C_LCD_driver as mylcd
+
 
 def readSensor():
     root.after(5000, readSensor)
@@ -19,8 +20,8 @@ def readSensor():
 	# humidity.set(hum+"  %")
 	# humiditytext.set(hum)
 
-mylcd = mylcd.lcd()
-
+screen = mylcd.lcd()
+swrite = screen.lcd_display_string
 
 def populateScreen(w, x, y, z):
     swrite(f"{w}", line=1, pos=5)
