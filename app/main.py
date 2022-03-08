@@ -45,6 +45,8 @@ def main_menu():
         swrite(">", 2, 3)
         swrite(menu_list[p], 2, 5)
         swrite(menu_list[p+1], 3, 5)
+        print(menu_list[p])
+        print(menu_list[p+1])
 
         swrite("v", 4, 8)
 
