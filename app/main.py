@@ -2,6 +2,8 @@
 # pip install RPi.GPIO 
 # sudo pip3 install Adafruit_DHT
 
+# please autopull this!
+
 # import rpi_gpio
 import I2C_LCD_driver as mylcd
 
