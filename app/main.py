@@ -3,8 +3,10 @@
 # sudo pip3 install Adafruit_DHT
 
 # import rpi_gpio
-import keyboard
+
+from time import sleep
 import I2C_LCD_driver as mylcd
+
 
 def readSensor():
     root.after(5000, readSensor)
@@ -38,8 +40,7 @@ def main_menu():
         n = len(menu_options)
         p = 0
 
-        if keyboard.is_pressed("s") and p<n+1: p+=1
-
+        # if keyboard.is_pressed("s") and p<n+1: p+=1
         swrite("^", line=1, pos=8)
 
         swrite(menu_options[p], line=2, pos=5)
@@ -47,5 +48,9 @@ def main_menu():
 
         swrite("v", line=4, pos=8)
 
+        if p==n: break
+    
+        sleep(1.5)
+        p+=1
 
 main_menu()
