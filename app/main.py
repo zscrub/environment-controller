@@ -42,6 +42,7 @@ def main_menu():
     l = list(menu_options.keys())
     n = len(l)
     while True:
+        if p<n: p+=1
 
         swrite("^", line=1, pos=8)
         swrite(">", 2, 3)
@@ -58,10 +59,9 @@ def main_menu():
             sleep(1.5) 
             swrite(" ", 2, 3)
             swrite(">", 3, 3)
-            break
+            continue
 
         sleep(1.5)
-        p+=1
         screen.lcd_clear()
 
 main_menu()
