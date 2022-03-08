@@ -3,7 +3,7 @@ import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BOARD)
 
 GPIO.setwarnings(False) 
-BUTTON_DOWN=GPIO.setup(21, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Set pin to be an input pin and set initial value to be pulled low (off)
+BUTTON_DOWN=GPIO.setup(40, GPIO.IN, pull_up_down=GPIO.PUD_UP) # Set pin to be an input pin and set initial value to be pulled low (off)
 
 if BUTTON_DOWN: print("Button pressed 8)")
 
