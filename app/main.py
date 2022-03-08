@@ -35,7 +35,7 @@ menu_options = {
 
 def main_menu():
     p = 0
-    l = menu_options.keys()
+    l = [menu_options.keys()]
     n = len(l)
     while True:
         swrite("^", line=1, pos=8)
