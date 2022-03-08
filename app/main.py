@@ -26,12 +26,15 @@ def readSensor():
 screen = mylcd.lcd()
 swrite = screen.lcd_display_string
 
+
 menu_options = {
         "Temp": {"SetTemp": 0, "SetFormat": "F"}, 
         "Humidity": 0.8,
         "Light": 0, 
         "Fan": 0
     }
+
+menu_list = list(menu_options.keys())
 
 def main_menu():
     p = 0
@@ -40,8 +43,8 @@ def main_menu():
     while True:
         swrite("^", line=1, pos=8)
         
-        swrite(menu_options[l[p]], 2, 5)
-        swrite(menu_options[l[p+1]], 3, 5)
+        swrite(menu_list[p], 2, 5)
+        swrite(menu_list[p+1], 3, 5)
 
         swrite("v", 4, 8)
 
