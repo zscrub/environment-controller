@@ -46,4 +46,4 @@ def main_menu():
     swrite(menu_options[0], line=2, pos=5)
 
 
-menu_options()
+main_menu()
