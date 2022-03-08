@@ -41,23 +41,27 @@ def main_menu():
     l = list(menu_options.keys())
     n = len(l)
     while True:
-        sleep(1.5)
         swrite("^", line=1, pos=8)
         swrite(">", 2, 3)
 
         swrite(f"{p+1}.{menu_list[p]}", 2, 5)
+        print(f"{p+1}.{menu_list[p]}")
+
         swrite(f"{p+2}.{menu_list[p+1]}", 3, 5)
+        print(f"{p+2}.{menu_list[p+1]}")
         
         print(menu_list[p])
         print(menu_list[p+1])
 
         swrite("v", 4, 8)
 
-        if p==n-2: 
+        if p==n-2:
+            sleep(1.5) 
             swrite(" ", 2, 3)
             swrite(">", 3, 3)
             break
 
+        sleep(1.5)
         p+=1
         screen.lcd_clear()
 
