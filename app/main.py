@@ -49,7 +49,7 @@ def main_menu():
         swrite("v", 4, 8)
 
         if p==n-2: 
-            swrite("", 2, 3)
+            swrite(" ", 2, 3)
             swrite(">", 3, 3)
             break
 
