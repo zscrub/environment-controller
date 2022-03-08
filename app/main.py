@@ -64,10 +64,10 @@ def main_menu():
         p+=1
         screen.lcd_clear()
 
-
+    
+k = 1
 def button_test():
     i = 1
-    k = 1
     while True:
         if rpi_gpio.GPIO.input(40) == rpi_gpio.GPIO.HIGH: #button pressed
             swrite(f"Button pressed {i} times!", 2, 5)
