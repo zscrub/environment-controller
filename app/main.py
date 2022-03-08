@@ -27,7 +27,7 @@ screen = mylcd.lcd()
 swrite = screen.lcd_display_string
 
 menu_options = {
-        "Temp": {"TargetTemp": 0, "TempFormat": "F"}, 
+        "Temp": {"SetTemp": 0, "SetFormat": "F"}, 
         "Humidity": 0.8,
         "Light": 0, 
         "Fan": 0
