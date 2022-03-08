@@ -65,7 +65,6 @@ def main_menu():
         screen.lcd_clear()
 
     
-k = 1
 def button_test():
     i = 1
     while True:
@@ -77,6 +76,7 @@ def button_test():
 
 
 def button_pressed():
+    k = 1
     if rpi_gpio.GPIO.input(40) == rpi_gpio.GPIO.LOW: #button released
         print(f"Button released {k} times!")
         k+=1
