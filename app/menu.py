@@ -30,5 +30,4 @@ def move_cursor(p):
         swrite(f"{p+2}.{menu_list[p+1]}", 3, 5)
         print(f"{p+2}.{menu_list[p+1]}")
     except IndexError:
-        swrite(" ", 2, 3)
-        swrite(">", 3, 3)
+        ...
