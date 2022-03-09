@@ -31,16 +31,6 @@ def main_menu():
         BUTTON_DOWN = rpi_gpio.GPIO.input(38)
         BUTTON_ENTER = rpi_gpio.GPIO.input(36)
 
-        # if BUTTON_UP==is_pressed: 
-        #     print("Button1 printed...")
-        #     screen.lcd_clear()
-        #     move_cursor(p)
-
-        # if BUTTON_DOWN==is_pressed: 
-        #     print("Button2 printed...")
-        #     screen.lcd_clear()
-        #     move_cursor(p)
-
         if BUTTON_UP==is_pressed and p>0: 
             p-=1; 
             screen.lcd_clear();  
