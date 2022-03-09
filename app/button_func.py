@@ -1,5 +1,15 @@
 from operator import truediv
 
+# temp
+from menu import (
+        screen,
+        swrite,
+        menu_options, 
+        menu_list,
+        menu_index, 
+        move_cursor
+    )
+
 
 import drivers.rpi_gpio as rpi_gpio
 
@@ -45,20 +55,20 @@ import drivers.rpi_gpio as rpi_gpio
 #             button_enter_released = False
 #         break
 
-# def button_test():
-#     i = 1
-#     k = 1
-#     while True:
-#         if rpi_gpio.GPIO.input(40) == rpi_gpio.GPIO.HIGH: #button pressed
-#             swrite(f"Button 1 pressed {i} times!", 2, 5)
-#             print(f"Button 1 pressed {i} times!")
-#             i+=1
+def button_test():
+    i = 1
+    k = 1
+    while True:
+        if rpi_gpio.GPIO.input(40) == rpi_gpio.GPIO.HIGH: #button pressed
+            swrite(f"Button 1 pressed {i} times!", 2, 5)
+            print(f"Button 1 pressed {i} times!")
+            i+=1
 
-#         if rpi_gpio.GPIO.input(38) == rpi_gpio.GPIO.HIGH: #button pressed
-#             swrite(f"Button 2 pressed {i} times!", 2, 5)
-#             print(f"Button 2 pressed {i} times!")
-#             i-=1
-#             # button_pressed(k)
+        if rpi_gpio.GPIO.input(38) == rpi_gpio.GPIO.HIGH: #button pressed
+            swrite(f"Button 2 pressed {i} times!", 2, 5)
+            print(f"Button 2 pressed {i} times!")
+            i-=1
+            # button_pressed(k)
 
 
 # def button_pressed(k):
