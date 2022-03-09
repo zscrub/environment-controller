@@ -74,7 +74,7 @@ def button_test():
             print(f"Button 2 pressed {i} times!")
             i-=1
             # button_pressed(k)
-button_test()
+
 
 # def button_pressed(k):
 #     if rpi_gpio.GPIO.input(40) == rpi_gpio.GPIO.LOW: #button released
