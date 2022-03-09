@@ -66,8 +66,7 @@ import drivers.rpi_gpio as rpi_gpio
 #         print(f"Button released {k} times!")
 #     k+=1
 
-
-BUTTON_UP = (rpi_gpio.GPIO.input(40) == rpi_gpio.GPIO.HIGH)
-BUTTON_DOWN = (rpi_gpio.GPIO.input(38) == rpi_gpio.GPIO.HIGH)
-BUTTON_ENTER = (rpi_gpio.GPIO.input(36) == rpi_gpio.GPIO.HIGH)
-
+is_pressed = rpi_gpio.GPIO.HIGH
+BUTTON_UP = rpi_gpio.GPIO.input(40)
+BUTTON_DOWN = rpi_gpio.GPIO.input(38)
+BUTTON_ENTER = rpi_gpio.GPIO.input(36)

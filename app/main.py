@@ -1,7 +1,8 @@
 from button_func import (
+        is_pressed
         BUTTON_UP,
         BUTTON_DOWN,
-        BUTTON_ENTER
+        BUTTON_ENTER,
     )
 
 import drivers.rpi_gpio
@@ -27,10 +28,10 @@ def main_menu():
 
     while True:
 
-        if BUTTON_UP: print("Button1 printed...")
-        if BUTTON_DOWN: print("Button2 printed...")
+        if BUTTON_UP==is_pressed: print("Button1 printed...")
+        if BUTTON_DOWN==is_pressed: print("Button2 printed...")
 
-        # if BUTTON_UP and p>0: p-=1; screen.lcd_clear();  move_cursor(p)
-        # if BUTTON_DOWN and p<M-1: p+=1; screen.lcd_clear();  move_cursor(p)
+        # if BUTTON_UP==is_pressed and p>0: p-=1; screen.lcd_clear();  move_cursor(p)
+        # if BUTTON_DOWN==is_pressed and p<M-1: p+=1; screen.lcd_clear();  move_cursor(p)
 
 main_menu()
