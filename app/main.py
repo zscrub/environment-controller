@@ -3,6 +3,8 @@
 # sudo pip3 install Adafruit_DHT
 
 import rpi_gpio
+import button_func
+
 
 from time import sleep
 import I2C_LCD_driver as mylcd
@@ -88,4 +90,4 @@ def button_pressed(k):
         
 
 
-button_test()
+button_func.button_down_pressed()
