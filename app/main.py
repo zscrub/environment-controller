@@ -1,8 +1,8 @@
 from button_func import (
-        is_pressed
+        is_pressed,
         BUTTON_UP,
         BUTTON_DOWN,
-        BUTTON_ENTER,
+        BUTTON_ENTER
     )
 
 import drivers.rpi_gpio
