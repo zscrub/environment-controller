@@ -58,18 +58,23 @@ import drivers.rpi_gpio as rpi_gpio
 def button_test():
     i = 1
     k = 1
+    
+    b = rpi_gpio.GPIO.input(38) 
+    r = rpi_gpio.GPIO.HIGH #button pressed
+    print(f"{b}=={r}") 
     while True:
+        print(f"{rpi_gpio.GPIO.input(40)}=={rpi_gpio.GPIO.HIGH}", end="\r")
         if rpi_gpio.GPIO.input(40) == rpi_gpio.GPIO.HIGH: #button pressed
             swrite(f"Button 1 pressed {i} times!", 2, 5)
             print(f"Button 1 pressed {i} times!")
             i+=1
 
-        if rpi_gpio.GPIO.input(38) == rpi_gpio.GPIO.HIGH: #button pressed
+        if b == r: #button pressed
             swrite(f"Button 2 pressed {i} times!", 2, 5)
             print(f"Button 2 pressed {i} times!")
             i-=1
             # button_pressed(k)
-
+button_test()
 
 # def button_pressed(k):
 #     if rpi_gpio.GPIO.input(40) == rpi_gpio.GPIO.LOW: #button released
