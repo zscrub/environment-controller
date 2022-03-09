@@ -20,7 +20,7 @@ def button_up():
             #button_up_pressed = True
             print("up button pressed")
             button_up_pressed = True
-        if rpi_gpio.GPIO.input(40) == rpi_gpio.GPIO.LOW and button_up_pressed == true:
+        if rpi_gpio.GPIO.input(40) == rpi_gpio.GPIO.LOW and button_up_pressed == True:
             print("up button released")
             button_up_released = True
             button_up_pressed = False
