@@ -19,7 +19,7 @@ def button_up():
             button_up_released = False
         break
 
-def button_down():
+def button_down_pressed():
     while button_down_pressed == False and rpi_gpio.GPIO.input(38) == rpi_gpio.GPIO.HIGH: #button pressed
         #button_down_pressed == True
         print("down button pressed")
