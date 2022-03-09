@@ -1,3 +1,7 @@
+# sudo apt-get -y install python3-rpi.gpio
+# pip install RPi.GPIO 
+# sudo pip3 install Adafruit_DHT
+
 Adafruit-Blinka==7.1.0
 adafruit-circuitpython-dht==3.7.1
 Adafruit-PlatformDetect==3.20.1

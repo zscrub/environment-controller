@@ -42,4 +42,9 @@ def button_enter():
             button_enter_released = False
         break
 
-#button_up()
+
+
+BUTTON_UP = (rpi_gpio.GPIO.input(40) == rpi_gpio.GPIO.HIGH)
+BUTTON_DOWN = (rpi_gpio.GPIO.input(38) == rpi_gpio.GPIO.HIGH)
+BUTTON_ENTER = (rpi_gpio.GPIO.input(36) == rpi_gpio.GPIO.HIGH)
+
