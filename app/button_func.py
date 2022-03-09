@@ -63,6 +63,8 @@ def button_test():
     r = rpi_gpio.GPIO.HIGH #button pressed
     print(f"{b}=={r}") 
     while True:
+        global b
+        global r
         print(f"{rpi_gpio.GPIO.input(40)}=={rpi_gpio.GPIO.HIGH}", end="\r")
         if rpi_gpio.GPIO.input(40) == rpi_gpio.GPIO.HIGH: #button pressed
             swrite(f"Button 1 pressed {i} times!", 2, 5)
