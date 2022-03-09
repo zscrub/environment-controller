@@ -1,7 +1,7 @@
 from operator import truediv
 
 
-import drivers.rpi_gpio
+import drivers.rpi_gpio as rpi_gpio
 
 # COMMENT HOTKEY -> CNTRL + /
 # commented anything unused for now
