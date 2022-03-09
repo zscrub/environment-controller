@@ -27,6 +27,7 @@ def main_menu():
     menu_index(p)
 
     while True:
+        sleep(0.25)
         BUTTON_UP = rpi_gpio.GPIO.input(40)
         BUTTON_DOWN = rpi_gpio.GPIO.input(38)
         BUTTON_ENTER = rpi_gpio.GPIO.input(36)
