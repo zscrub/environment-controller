@@ -4,7 +4,7 @@ import button_func
 from time import sleep
 import I2C_LCD_driver as mylcd
 
-from menu import menu_index
+from menu import menu_index, menu_options
 
 def readSensor():
     root.after(5000, readSensor)
