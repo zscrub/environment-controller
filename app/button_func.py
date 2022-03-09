@@ -36,4 +36,4 @@ def button_enter():
             button_enter_released = False
         break
 
-button_up()
+#button_up()
