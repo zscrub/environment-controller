@@ -27,18 +27,28 @@ def main_menu():
     menu_index(p)
 
     while True:
+        BUTTON_UP = rpi_gpio.GPIO.input(40)
+        BUTTON_DOWN = rpi_gpio.GPIO.input(38)
+        BUTTON_ENTER = rpi_gpio.GPIO.input(36)
 
-        if BUTTON_UP==is_pressed: 
-            print("Button1 printed...")
-            screen.lcd_clear()
+        # if BUTTON_UP==is_pressed: 
+        #     print("Button1 printed...")
+        #     screen.lcd_clear()
+        #     move_cursor(p)
+
+        # if BUTTON_DOWN==is_pressed: 
+        #     print("Button2 printed...")
+        #     screen.lcd_clear()
+        #     move_cursor(p)
+
+        if BUTTON_UP==is_pressed and p>0: 
+            p-=1; 
+            screen.lcd_clear();  
             move_cursor(p)
-
-        if BUTTON_DOWN==is_pressed: 
-            print("Button2 printed...")
-            screen.lcd_clear()
+            
+        if BUTTON_DOWN==is_pressed and p<M-1: 
+            p+=1; 
+            screen.lcd_clear();  
             move_cursor(p)
-
-        # if BUTTON_UP==is_pressed and p>0: p-=1; screen.lcd_clear();  move_cursor(p)
-        # if BUTTON_DOWN==is_pressed and p<M-1: p+=1; screen.lcd_clear();  move_cursor(p)
 
 main_menu()
