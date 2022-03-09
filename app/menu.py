@@ -1,4 +1,9 @@
 from time import sleep
+import I2C_LCD_driver as mylcd
+
+screen = mylcd.lcd()
+swrite = screen.lcd_display_string
+
 
 menu_options = {
         "Temp": {"SetTemp": 0, "SetFormat": "F"}, 
@@ -7,38 +12,20 @@ menu_options = {
         "Fan": 0
     }
 
-# redundant
-# p = 0
-# l = list(menu_options.keys())
-# M = len(l)-1
+menu_list = list(menu_options.keys())
 
 def menu_index():
     swrite("^", line=1, pos=8)
     swrite(">", 2, 3)
     swrite("v", 4, 8)
 
-
-
-# print(menu_options)
-
-# print(f"{l[p]}\n{l[p+1]}", end = "\r")
-
-# while True: 
-#     sleep(0.1)
-
-#     if keyboard.is_pressed('w') and p>0: 
-#         p-=1
-#         # print(p)
-#         try:
-#             print(f"  > {l[p]}\n{l[p+1]}", end = "\r")
-#         except IndexError:
-#             print(f"    {l[p-1]}\n> {l[p]}", end = "\r")
-            
-#     if keyboard.is_pressed('s') and p<M: 
-#         p+=1
-#         # print(p)
-#         try:
-#             print(f"  > {l[p]}\n{l[p+1]}", end = "\r")
-#         except IndexError:
-#             print(f"    {l[p-1]}\n> {l[p]}", end = "\r")
-            
+def move_cursor():
+    try:
+        swrite(f"{p+1}.{menu_list[p]}", 2, 5)
+        print(f"{p+1}.{menu_list[p]}")
+        
+        swrite(f"{p+2}.{menu_list[p+1]}", 3, 5)
+        print(f"{p+2}.{menu_list[p+1]}")
+    except IndexError:
+        swrite(" ", 2, 3)
+        swrite(">", 3, 3)

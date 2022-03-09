@@ -35,3 +35,19 @@ while True:
         raise error
 
     time.sleep(2.0)
+
+
+# need to recreate this function - keeping for reference
+# def readSensor():
+#     root.after(5000, readSensor)
+#     h,t = dht.read_retry(dht.DHT22,7)
+#     temp = f"{t:.1f}"
+#     o = u"\N{DEGREE SIGN}"
+
+#     temp_f = (t * 9.0/5.0) + 32
+#     temp_f = f"{temp_f:.1f} {o}F"	
+# 	# temperature.set(temp_f)	
+
+#     hum = f"{hum:.1f}%"
+# 	# humidity.set(hum+"  %")
+# 	# humiditytext.set(hum)
