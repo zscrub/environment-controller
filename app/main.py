@@ -90,4 +90,4 @@ def button_pressed(k):
         
 
 
-button_func.button_down_pressed()
+button_func.button_up_pressed()
