@@ -27,7 +27,10 @@ def main_menu():
 
     while True:
 
-        if BUTTON_UP and p>0: p-=1; screen.lcd_clear();  move_cursor(p)
-        if BUTTON_DOWN and p<M-1: p+=1; screen.lcd_clear();  move_cursor(p)
+        if BUTTON_UP: print("Button1 printed...")
+        if BUTTON_DOWN: print("Button2 printed...")
+
+        # if BUTTON_UP and p>0: p-=1; screen.lcd_clear();  move_cursor(p)
+        # if BUTTON_DOWN and p<M-1: p+=1; screen.lcd_clear();  move_cursor(p)
 
 main_menu()
