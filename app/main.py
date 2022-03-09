@@ -5,7 +5,7 @@ from button_func import (
         BUTTON_ENTER
     )
 
-import drivers.rpi_gpio
+import drivers.rpi_gpio as rpi_gpio
 
 from time import sleep
 
