@@ -44,6 +44,7 @@ def main_menu():
 
         if BUTTON_ENTER==is_pressed:
             selection = l[p]
+            print(selection)
             print(menu_options[selection])
             screen.lcd_clear()
             screen.lcd_write(menu_options[selection])
