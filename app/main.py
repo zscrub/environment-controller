@@ -47,7 +47,7 @@ def main_menu():
             print(selection)
             print(menu_options[selection])
             screen.lcd_clear()
-            screen.lcd_write(menu_options[selection])
+            # screen.lcd_write(menu_options[selection])
             
 
 main_menu()
