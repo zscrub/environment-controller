@@ -42,4 +42,11 @@ def main_menu():
             screen.lcd_clear();  
             move_cursor(p)
 
+        if BUTTON_ENTER==is_pressed:
+            selection = l[p]
+            print(menu_options[selection])
+            screen.lcd_clear()
+            screen.lcd_write(menu_options[selection])
+            
+
 main_menu()
