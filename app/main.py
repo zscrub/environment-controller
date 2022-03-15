@@ -38,7 +38,11 @@ def main_menu():
             screen.lcd_clear()
             move_cursor(p)
 
-        # if BUTTON_UP==is_pressed and p>0: p-=1; screen.lcd_clear();  move_cursor(p)
-        # if BUTTON_DOWN==is_pressed and p<M-1: p+=1; screen.lcd_clear();  move_cursor(p)
+        if BUTTON_ENTER==is_pressed:
+            selection = l[p]
+            print(menu_options[selection])
+            screen.lcd_clear()
+            screen.lcd_write(menu_options[selection])
+            
 
 main_menu()
