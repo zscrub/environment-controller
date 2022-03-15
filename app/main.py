@@ -43,11 +43,10 @@ def main_menu():
             move_cursor(p)
 
         if BUTTON_ENTER==is_pressed:
+            screen.lcd_clear()
             selection = l[p]
             print(selection)
             print(menu_options[selection])
-            screen.lcd_clear()
-            # screen.lcd_write(menu_options[selection])
-            
+            l_ = (menu_options[selection].keys())
 
 main_menu()
